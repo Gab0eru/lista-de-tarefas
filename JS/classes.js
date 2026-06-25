@@ -1,4 +1,3 @@
-
 export class categoria{
     // Encapsulemento de dados privados
     #nome
@@ -9,14 +8,14 @@ export class categoria{
     }
     // Uso de getters
     get valor(){
-        return this.valor;
+        return this.#valor;
     }
     get nome(){
-        return this.nome;
+        return this.#nome;
     }
     // Manipulação de estado
     adicionarvalor(valor){
-        this.valor += parseFloat(valor);
+        this.#valor += parseFloat(valor);
     }
 }
 
@@ -31,7 +30,7 @@ export class listaDeGastosPorCategoria{
     }
     obterCategoriaPorNome(nome){
         //Programação funcional
-        return this.#categorias.find((categoria)=> categoria.nome == nome);
+        return this.#categorias.find((categoria)=> categoria.nome === nome);
     }
     obterTotal(){
         //Redução de dados com reduce

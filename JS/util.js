@@ -1,5 +1,5 @@
 //Funções utilitárias
-const obterElemento = (id) => document.getElementById("id");
+const obterElemento = (id) => document.getElementById(id);
 //Função pura
 export const valorNegativo = (valor) => valor < 0;
 
@@ -9,7 +9,7 @@ export const atualizarInterface = (gastoPorCategoria) => {
     const categorias = gastoPorCategoria.categorias;
     categorias.forEach(({nome, valor}) =>{
         const elemento = obterElemento(nome);
-        elemento.textContent = `${nome}: R${formataMoeda(valor)}`
+        elemento.textContent = `${nome}: R$ ${formataMoeda(valor)}`
     });
 
     const elementoTotal = obterElemento("total");

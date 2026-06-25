@@ -14,7 +14,7 @@ formulario.addEventListener("submit", (evento) => {
     //Prevenção do comportamento
     evento.preventDefault();
 
-    const valorInformado = formulario.elements.valor.value;
+    const valorInformado = parseFloat(formulario.elements.valor.value);
     const categoriaInformada = formulario.elements.categoria.value;
 
     if(valorNegativo(valorInformado)){
