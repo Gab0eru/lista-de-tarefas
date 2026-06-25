@@ -1,3 +1,4 @@
+
 export class categoria{
     // Encapsulemento de dados privados
     #nome
@@ -16,5 +17,24 @@ export class categoria{
     // Manipulação de estado
     adicionarvalor(valor){
         this.valor += parseFloat(valor);
+    }
+}
+
+export class listaDeGastosPorCategoria{
+    #categorias;
+    //Rest operator
+    constructor(... categorias){
+        this.#categorias = categorias;
+    }
+    get categorias(){
+        return this.#categorias
+    }
+    obterCategoriaPorNome(nome){
+        //Programação funcional
+        return this.#categorias.find((categoria)=> categoria.nome == nome);
+    }
+    obterTotal(){
+        //Redução de dados com reduce
+        return this.#categorias.reduce((total, categoria)=> total + categoria.valor, 0);
     }
 }

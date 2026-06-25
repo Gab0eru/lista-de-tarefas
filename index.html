@@ -10,15 +10,15 @@
     <main>
         <h1>Controle de gastos</h1>
         <form>
-            <input type="number" id="valor" placeholder="Digite o valor gasto">
-            <select id="categoria">
+            <input type="number" name="valor" placeholder="Digite o valor gasto">
+            <select name="categoria">
                 <option>Alimentação</option>
                 <option>Transporte</option>
                 <option>Lazer</option>
                 <option>Outros</option>
                 <option>Total</option>
             </select>
-            <button type="button" onclick="adicionarGasto()">Adicionar</button>
+            <button type="submit">Adicionar</button>
         </form>
         <p id="alimentacao">Alimentação: R$ 0,00</p>
         <p id="transporte">Transporte: R$ 0,00</p>
