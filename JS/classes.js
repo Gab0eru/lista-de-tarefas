@@ -14,7 +14,7 @@ export class categoria{
         return this.#nome;
     }
     // Manipulação de estado
-    adicionarvalor(valor){
+    adicionarValor(valor){
         this.#valor += parseFloat(valor);
     }
 }

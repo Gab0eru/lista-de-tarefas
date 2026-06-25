@@ -3,14 +3,14 @@ import { categoria, listaDeGastosPorCategoria } from "./classes.js";
 import { valorNegativo, atualizarInterface } from "./util.js";
 // POO
 const gastoPorCategoria = new listaDeGastosPorCategoria(
-    new categoria ("Alimentação"),
-    new categoria ("Transporte"),
-    new categoria ("Lazer"),
-    new categoria ("Outros"),
+    new categoria ("alimentacao"),
+    new categoria ("transporte"),
+    new categoria ("lazer"),
+    new categoria ("outros"),
 )
 //Manipulação do DOM
 const formulario = document.querySelector("form");
-formulario.addEventListener("submit", (evento) => {
+formulario.addEventListener('submit', (evento) => {
     //Prevenção do comportamento
     evento.preventDefault();
 
@@ -22,6 +22,7 @@ formulario.addEventListener("submit", (evento) => {
         return;
     }
     const categoria = gastoPorCategoria.obterCategoriaPorNome(categoriaInformada);
+    console.log(categoria);
     categoria.adicionarValor(valorInformado);
 
     atualizarInterface(gastoPorCategoria);
